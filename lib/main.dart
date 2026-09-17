@@ -51,9 +51,7 @@ print("What is your name?") ;
     "George Washington": "He made the US",
     "Uhh... Rick!": "https://youtu.be/yvg5ZVwR-N4?si=8IXORpDwbKWTjfCR",
   };
-  for(var j in people){
     print(people) ;
-  }
   print('Oh wait, I know someone else!') ;
   people.add(creditCardnumber);
   print(people);
