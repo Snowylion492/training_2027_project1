@@ -14,13 +14,13 @@ Map<String, int> addingTeams(String addedTeam, int newWins) {
   return teamsAndWinsMap ;
 }
 void areYouDone(Map<String, int> teamsAndWinsMap) {
-  print('Are you done? Say Yes exactly if yes. If you want to see all data, say See list') ;
+  print('Are you done? Say \'yes\' exactly if yes. If you want to see all data, say \'see list\'') ;
   String done = stdin.readLineSync() ?? 'No';
-  if(done == 'Yes') {
+  if(done.toLowerCase() == 'yes') {
     print('Ok, goodbye!') ;
     exit(0) ;
   }
-  else if(done == 'See list') {
+  else if(done.toLowerCase() == 'see list') {
 print('$teamsAndWinsMap') ;
   }
   else{
