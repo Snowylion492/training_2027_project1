@@ -1,5 +1,13 @@
 import 'dart:io';
 import 'dart:math' ;
+// Nested Map example)
+// Map<String, dynamic> userProfile = {
+// 'name': 'Alex',
+// 'contact': {
+// 'email': 'alex@example.com',
+// 'phone': '123-456-7890'
+// }
+// };
 Map<String,int> teamsAndWins(String team, int wins) {
   Map<String, int> teamsAndWinsMap = {
     team: wins
@@ -48,3 +56,4 @@ void runCli(List<String> arguments) {
     areYouDone(teamsAndWinsMap);
   }
 }
+
