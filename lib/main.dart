@@ -8,6 +8,7 @@ import 'dart:math' ;
 // 'phone': '123-456-7890'
 // }
 // };
+// come up with more questions
 Map<String,int> teamsAndWins(String team, int wins) {
   Map<String, int> teamsAndWinsMap = {
     team: wins
