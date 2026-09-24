@@ -51,7 +51,7 @@ void runCli(List<String> arguments) {
 List<Data> teamsAndWinsList= teamsAndWins(team, intWins, intNumber, teamRanking);
   print(teamsAndWinsList);
   int y = 0;
-  for(y = 0; y == 0; ) {
+  while(y == 0) {
     areYouDone(teamsAndWinsList);
   }
 }
