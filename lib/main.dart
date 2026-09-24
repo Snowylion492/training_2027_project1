@@ -13,7 +13,9 @@ void areYouDone(List<Data> teamsAndWinsList) {
     exit(0) ;
   }
   else if(done.toLowerCase() == 'see list') {
-    print('$teamsAndWinsList') ;
+    for (Data j in teamsAndWinsList) {
+      print('${j.typeValueA}, ${j.typeValueB}, ${j.typeValueC}, ${j.typeValueD}.') ;
+    }
   }
   else{
     print('What is the team\'s chosen name?');
@@ -27,7 +29,9 @@ void areYouDone(List<Data> teamsAndWinsList) {
     String wins = stdin.readLineSync() ?? 'Error';
     int intWins = int.tryParse(wins) ?? 35505;
     teamsAndWinsList.add(Data(team, intNumber, teamRanking, intWins));
-    print(teamsAndWinsList);
+    for (Data j in teamsAndWinsList) {
+      print('${j.typeValueA}, ${j.typeValueB}, ${j.typeValueC}, ${j.typeValueD}.') ;
+    }
   }
 }
 class Data {
@@ -35,7 +39,7 @@ class Data {
   int typeValueB;
   String typeValueC;
   int typeValueD;
-  Data(this.typeValueA, this.typeValueB, this.typeValueC, this.typeValueD);
+  Data(this.typeValueA, this.typeValueB, this.typeValueC, this.typeValueD) ;
 }
 void runCli(List<String> arguments) {
   print('What is the team\'s chosen name?');
@@ -49,9 +53,11 @@ void runCli(List<String> arguments) {
   String wins = stdin.readLineSync() ?? 'Error';
   int intWins = int.tryParse(wins) ?? 35505;
 List<Data> teamsAndWinsList= teamsAndWins(team, intNumber, teamRanking, intWins);
-  print(teamsAndWinsList);
+  for (Data j in teamsAndWinsList) {
+    print('${j.typeValueA}, ${j.typeValueB}, ${j.typeValueC}, ${j.typeValueD}.') ;
+  }
   int y = 0;
-  while(y == 0) {
+  for(y = 0; y == 0; ) {
     areYouDone(teamsAndWinsList);
   }
 }
