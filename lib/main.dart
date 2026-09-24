@@ -1,5 +1,5 @@
 import 'dart:io';
-List<Data> teamsAndWins(String team, int intWins, int intNumber, String teamRanking) {
+List<Data> teamsAndWins(String team, int intNumber, String teamRanking, int intWins) {
   List<Data> teamsAndWinsList = [
     Data(team, intNumber, teamRanking, intWins)
   ];
@@ -48,7 +48,7 @@ void runCli(List<String> arguments) {
   print('How many wins do they have?');
   String wins = stdin.readLineSync() ?? 'Error';
   int intWins = int.tryParse(wins) ?? 35505;
-List<Data> teamsAndWinsList= teamsAndWins(team, intWins, intNumber, teamRanking);
+List<Data> teamsAndWinsList= teamsAndWins(team, intNumber, teamRanking, intWins);
   print(teamsAndWinsList);
   int y = 0;
   while(y == 0) {
