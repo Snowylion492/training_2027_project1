@@ -42,7 +42,7 @@ void areYouDone(List<Data> teamsAndWinsList) {
       Colorize coloredIntNumber = Colorize('${j.typeValueB}') ;
       Colorize coloredTeamRanking = Colorize('${j.typeValueC}') ;
       Colorize coloredIntWins = Colorize('${j.typeValueD}') ;
-      print(coloredTeam.red().toString() + coloredIntNumber.blue().toString() + coloredTeamRanking.green().toString() + coloredIntWins.yellow().toString()) ;
+      print(coloredTeam.red().toString() + ', ' + coloredIntNumber.blue().toString() + ', ' + coloredTeamRanking.green().toString() + ', ' + coloredIntWins.yellow().toString() + '.') ;
     }
   }
 }

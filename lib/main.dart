@@ -25,7 +25,7 @@ List<Data> teamsAndWinsList= teamsAndWins(team, intNumber, teamRanking, intWins)
     Colorize coloredIntNumber = Colorize('${j.typeValueB}') ;
     Colorize coloredTeamRanking = Colorize('${j.typeValueC}') ;
     Colorize coloredIntWins = Colorize('${j.typeValueD}') ;
-    print(coloredTeam.red().toString() + coloredIntNumber.blue().toString() + coloredTeamRanking.green().toString() + coloredIntWins.yellow().toString()) ;
+    print(coloredTeam.red().toString() + ', ' + coloredIntNumber.blue().toString() + ', ' + coloredTeamRanking.green().toString() + ', ' + coloredIntWins.yellow().toString() + '.') ;
   }
   int y = 0;
   for(y = 0; y == 0; ) {
