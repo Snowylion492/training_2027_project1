@@ -3,6 +3,7 @@ import 'dart:math';
 import 'firstList.dart';
 import 'main.dart';
 import 'dataClass.dart';
+import 'package:colorize/colorize.dart';
 void areYouDone(List<Data> teamsAndWinsList) {
   print('Are you done? Say \'yes\' exactly if yes. If you want to see all data, say \'see list\'') ;
   String done = stdin.readLineSync() ?? 'No';
@@ -12,7 +13,12 @@ void areYouDone(List<Data> teamsAndWinsList) {
   }
   else if(done.toLowerCase() == 'see list') {
     for (Data j in teamsAndWinsList) {
-      print('${j.typeValueA}, ${j.typeValueB}, ${j.typeValueC}, ${j.typeValueD}.') ;
+
+      Colorize coloredTeam = Colorize('${j.typeValueA}') ;
+      Colorize coloredIntNumber = Colorize('${j.typeValueB}') ;
+      Colorize coloredTeamRanking = Colorize('${j.typeValueC}') ;
+      Colorize coloredIntWins = Colorize('${j.typeValueD}') ;
+      print(coloredTeam.red().toString() + coloredIntNumber.blue().toString() + coloredTeamRanking.green().toString() + coloredIntWins.yellow().toString()) ;
     }
   }
   else{
@@ -28,7 +34,15 @@ void areYouDone(List<Data> teamsAndWinsList) {
     int intWins = int.tryParse(wins) ?? 35505;
     teamsAndWinsList.add(Data(team, intNumber, teamRanking, intWins));
     for (Data j in teamsAndWinsList) {
-      print('${j.typeValueA}, ${j.typeValueB}, ${j.typeValueC}, ${j.typeValueD}.') ;
+      color(team, front: Styles.RED) ;
+      color('$intNumber', front: Styles.BLUE) ;
+      color(teamRanking, front: Styles.GREEN) ;
+      color('$intNumber', front: Styles.YELLOW) ;
+      Colorize coloredTeam = Colorize('${j.typeValueA}') ;
+      Colorize coloredIntNumber = Colorize('${j.typeValueB}') ;
+      Colorize coloredTeamRanking = Colorize('${j.typeValueC}') ;
+      Colorize coloredIntWins = Colorize('${j.typeValueD}') ;
+      print(coloredTeam.red().toString() + coloredIntNumber.blue().toString() + coloredTeamRanking.green().toString() + coloredIntWins.yellow().toString()) ;
     }
   }
 }
