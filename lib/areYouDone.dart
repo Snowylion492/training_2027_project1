@@ -15,11 +15,12 @@ void areYouDone(List<Data> teamsAndWinsList) {
   else if(done.toLowerCase() == 'see list') {
     for (Data j in teamsAndWinsList) {
 
-      Colorize coloredTeam = Colorize('${j.typeValueA}') ;
+      Colorize coloredTeam = Colorize(j.typeValueA) ;
       Colorize coloredIntNumber = Colorize('${j.typeValueB}') ;
       Colorize coloredTeamRanking = Colorize('${j.typeValueC}') ;
       Colorize coloredIntWins = Colorize('${j.typeValueD}') ;
       print(coloredTeam.red().toString() + coloredIntNumber.blue().toString() + coloredTeamRanking.green().toString() + coloredIntWins.yellow().toString()) ;
+      print(j.typeValueE) ;
     }
   }
   else{
@@ -42,13 +43,13 @@ void areYouDone(List<Data> teamsAndWinsList) {
       color('$intNumber', front: Styles.BLUE) ;
       color('$intGames', front: Styles.GREEN) ;
       color('$intWins', front: Styles.YELLOW) ;
-      Colorize coloredTeam = Colorize('${j.typeValueA}') ;
+      double percent = intWins/intGames * 100 ;
+      String percentNamer = '$team\'s current win percent is $percent%';
+      Colorize coloredTeam = Colorize(j.typeValueA) ;
       Colorize coloredIntNumber = Colorize('${j.typeValueB}') ;
       Colorize coloredTeamGames = Colorize('${j.typeValueC}') ;
       Colorize coloredIntWins = Colorize('${j.typeValueD}') ;
-      print(coloredTeam.red().toString() + ', ' + coloredIntNumber.blue().toString() + ', ' + coloredTeamGames.green().toString() + ', ' + coloredIntWins.yellow().toString() + '.') ;
-      double percent = intWins/intGames * 100 ;
-      String percentNamer = '$team\'s current win percent is $percent';
+      print('${coloredTeam.red()}, ${coloredIntNumber.blue()}, ${coloredTeamGames.green()}, ${coloredIntWins.yellow()}.') ;
       print(percentNamer) ;
     }
   }

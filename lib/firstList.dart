@@ -10,7 +10,7 @@ List<Data> teamsAndWins(String team, int intNumber, int intGames, int intWins, d
   color('$intGames', front: Styles.GREEN) ;
 color('$intNumber', front: Styles.YELLOW) ;
   double percent = intWins/intGames * 100 ;
-  String percentNamer = '$team\'s current win percent is $percent';
+  String percentNamer = '$team\'s current win percent is $percent%';
   List<Data> teamsAndWinsList = [
     Data(team, intNumber, intGames, intWins, percentNamer)
   ];

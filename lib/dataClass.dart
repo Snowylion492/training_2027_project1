@@ -5,5 +5,6 @@ class Data {
   int typeValueB;
   int typeValueC;
   int typeValueD;
-  Data(this.typeValueA, this.typeValueB, this.typeValueC, this.typeValueD, String percentNamer) ;
+  String typeValueE;
+  Data(this.typeValueA, this.typeValueB, this.typeValueC, this.typeValueD, this.typeValueE) ;
 }
