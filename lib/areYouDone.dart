@@ -37,6 +37,7 @@ void areYouDone(List<Data> teamsAndWinsList) {
     int intGames = int.tryParse(teamGames) ?? 35505;
     double percent = intWins/intGames * 100 ;
     String percentNamer = '$team\'s current win percent is $percent';
+    String winningOnAverage = percent >= 50 ? 'They are winning more than losing' : 'They are not winning more than losing';
     teamsAndWinsList.add(Data(team, intNumber, intGames, intWins, percentNamer));
     for (Data j in teamsAndWinsList) {
       color(team, front: Styles.RED) ;
@@ -51,6 +52,7 @@ void areYouDone(List<Data> teamsAndWinsList) {
       Colorize coloredIntWins = Colorize('${j.typeValueD}') ;
       print('${coloredTeam.red()}, ${coloredIntNumber.blue()}, ${coloredTeamGames.green()}, ${coloredIntWins.yellow()}.') ;
       print(percentNamer) ;
+      print(winningOnAverage) ;
     }
   }
 }

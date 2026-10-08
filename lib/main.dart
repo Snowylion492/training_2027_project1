@@ -18,6 +18,7 @@ void runCli(List<String> arguments) {
   int intGames = int.tryParse(teamGames) ?? 35505;
   double percent = intWins/intGames * 100 ;
   String percentNamer = '$team\'s current win percent is $percent%';
+  String winningOnAverage = percent >= 50 ? 'They are winning more than losing' : 'They are not winning more than losing';
   List<Data>  teamsAndWinsList = teamsAndWins(team, intNumber, intGames, intWins, percent, percentNamer);
   for (Data j in teamsAndWinsList) {
     color(team, front: Styles.RED) ;
@@ -30,6 +31,7 @@ void runCli(List<String> arguments) {
     Colorize coloredIntWins = Colorize('${j.typeValueD}') ;
     print('${coloredTeam.red()}, ${coloredIntNumber.blue()}, ${coloredTeamGames.green()}, ${coloredIntWins.yellow()}.') ;
     print(j.typeValueE) ;
+    print(winningOnAverage) ;
   }
   int y = 0;
   for(y = 0; y == 0; ) {
